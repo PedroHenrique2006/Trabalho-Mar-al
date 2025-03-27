@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ProjetoMauiApp1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ProjetoMauiApp1"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.TabBarIsVisible="True" 
+    Title="ProjetoMauiApp1">
+
+    <Shell.FlyoutBackground>
+        <SolidColorBrush Color="LightGray"></SolidColorBrush>
+    </Shell.FlyoutBackground>
+
+    <FlyoutItem Title="Menu" FlyoutDisplayOptions="AsMultipleItems" Shell.TitleColor="DarkMagenta">    
+        
+      <ShellContent
+        Title="MENU" Shell.TitleColor="DarkMagenta"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage"
+        Icon="home.png"/>
+
+      <ShellContent
+        Title="CURSOS" Shell.TitleColor="DarkMagenta"
+        ContentTemplate="{DataTemplate local:Cursos}"
+        Route="CURSOS"
+        Icon="curso.png"/>
+
+      <ShellContent
+        Title="PERÍODOS" Shell.TitleColor="DarkMagenta"
+        ContentTemplate="{DataTemplate local:Periodos}"
+        Route="Periodos"
+        Icon="periodo.png"/>
+
+      <ShellContent
+        Title="DISCIPLINAS CURSOS" Shell.TitleColor="DarkMagenta"
+        ContentTemplate="{DataTemplate local:DisciplinasCurso}"
+        Route="Disciplinas Curso"
+        Icon="disciplinascurso.png"/>
+
+      <ShellContent 
+        Title="SOBRE" Shell.TitleColor="DarkMagenta"
+        ContentTemplate="{DataTemplate local:Sobre}"
+        Route="Sobre"
+        Icon="sobre.png"/>
+    </FlyoutItem>
+
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout>
+            <Image Source="logo_unianchieta.png" WidthRequest="200"/>
+            <Label Text="FaculAPP" HorizontalOptions="Center"/>
+            <Label x:Name="lblCopyright" TextColor="DarkMagenta" 
+                   Text="Copyright Pedro M." 
+                   HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+    </Shell.FlyoutFooter>
+ 
+
+</Shell>
